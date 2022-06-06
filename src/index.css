@@ -1,0 +1,234 @@
+:root {
+  --clr-primary-1: hsl(162, 61%, 89%);
+  --white-1: #fff;
+  --dark-blue-1: #001;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montseratt", sans-serif;
+  color: #fff;
+}
+
+#root {
+  background: #001;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  background-image: url("./images/cold-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  display: block;
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+main.warm {
+  background-image: url("./images/warm-bg.jpg");
+  transition: 0.3s ease;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 9/16;
+  border-radius: 1rem;
+}
+
+.data-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.search-container{
+  width: 100%;
+  padding: 1rem;
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 3rem;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.25);
+  color: #222;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.location-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.location {
+  width: 100%;
+  padding: 0 0.75rem;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.date {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.temp {
+  position: relative;
+  display: flex;
+  margin: 1.25rem auto 1rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  align-items: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.weather {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather p {
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.other-container {
+  width: 110%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.humid, .pressure, .speed {
+  width: 5rem;
+  height: 6rem;
+  position: relative;
+  display: inline-block;
+  margin: 2rem auto 1rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.sub-text{
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  margin-top: 9rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.5);
+  border-top: 0.5rem solid rgba(50, 50, 50, 0.5);
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.icon {
+  align-items: center;
+  filter: drop-shadow(2px 2px 0 rgb(0 0 0 / 0.4));
+}
+
+@media only screen and (min-width: 480px) {
+  main {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 615px) {
+  main {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  main {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 865px) {
+  main {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  main {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main {
+    width: 25%;
+  }
+}
